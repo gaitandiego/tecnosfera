@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Tecnosfera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="site">
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">TECNOSFERA</a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="news.html">Noticias</a>
+        <a href="favorites.html">Favoritos<span class="nav-counter"></span></a>
+        <a href="contact.html" class="is-active">Contacto</a>
+      </nav>
+      <a href="login.html" class="btn btn--outline btn--sm">Ingresar</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="article">
+      <div class="page-head">
+        <h1>Escríbenos</h1>
+        <p>Envía tu propuesta de noticia, una corrección o una consulta.</p>
+      </div>
+
+      <div class="panel panel--form">
+        <form class="form" id="contact-form" novalidate>
+
+          <div class="field">
+            <label for="name">Nombre completo *</label>
+            <input type="text" id="name" name="name" class="input" required placeholder="Nombre y apellido">
+            <span class="field__error" id="error-name" hidden></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" class="input" required placeholder="tu@correo.com">
+            <span class="field__error" id="error-email" hidden></span>
+          </div>
+
+          <div class="field">
+            <label for="subject">Asunto *</label>
+            <select id="subject" name="subject" class="select" required>
+              <option value="">Selecciona una opción</option>
+              <option value="proposal">Propuesta de noticia</option>
+              <option value="correction">Corrección</option>
+              <option value="inquiry">Consulta general</option>
+            </select>
+            <span class="field__error" id="error-subject" hidden></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Mensaje *</label>
+            <textarea id="message" name="message" class="textarea" required placeholder="Cuéntanos en pocas líneas de qué se trata…"></textarea>
+            <span class="field__error" id="error-message" hidden></span>
+          </div>
+
+          <div class="field">
+            <label class="check">
+              <input type="checkbox" id="consent" name="consent" required>
+              Acepto el tratamiento de mis datos personales *
+            </label>
+            <span class="field__error" id="error-consent" hidden></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
+
+          <div class="alert alert--ok" id="confirmation" hidden>
+            <i class="fa-solid fa-circle-check"></i> Mensaje enviado correctamente
+            <span>Te responderemos en un plazo de dos días hábiles.</span>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Tecnosfera © 2026 — Noticias de tecnología</span>
+      <span>
+        <a href="index.html">Inicio</a> ·
+        <a href="news.html">Noticias</a> ·
+        <a href="favorites.html">Favoritos</a> ·
+        <a href="contact.html">Contacto</a>
+      </span>
+    </div>
+  </footer>
+
+</div>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

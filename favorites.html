@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis favoritos — Tecnosfera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="site">
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">TECNOSFERA</a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="news.html">Noticias</a>
+        <a href="favorites.html" class="is-active">Favoritos<span class="nav-counter"></span></a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+      <a href="login.html" class="btn btn--outline btn--sm">Ingresar</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-head page-head--row">
+      <div>
+        <h1>Mis favoritos</h1>
+        <p id="favorites-counter">Cargando…</p>
+      </div>
+      <button type="button" class="btn btn--ghost" id="clear-button" hidden><i class="fa-solid fa-trash"></i> Vaciar lista</button>
+    </div>
+
+    <section class="container">
+      <div class="fav-list" id="favorites-list"></div>
+
+      <div class="empty-state" id="favorites-empty" hidden>
+        <h3>Aún no has guardado noticias</h3>
+        <p>Pulsa "Agregar a favoritos" en cualquier noticia para añadirla aquí.</p>
+        <a href="news.html" class="btn btn--primary">Explorar noticias</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Tecnosfera © 2026 — Noticias de tecnología</span>
+      <span>
+        <a href="index.html">Inicio</a> ·
+        <a href="news.html">Noticias</a> ·
+        <a href="favorites.html">Favoritos</a> ·
+        <a href="contact.html">Contacto</a>
+      </span>
+    </div>
+  </footer>
+
+</div>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/favorites.js"></script>
+</body>
+</html>
